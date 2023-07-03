@@ -5,7 +5,7 @@
 <br>
 
 ## Intro
-- socket io 사용해보기 위한 테스트 프로젝
+- socket io 사용해보기 위한 테스트 프로젝트
 
 
 ## scripts
