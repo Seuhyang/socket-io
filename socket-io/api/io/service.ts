@@ -1,4 +1,4 @@
-import { getIO } from 'socket-io/util/socket.io';
+import { getIO } from '../../util/socket-io';
 const socket = getIO();
 
 export async function sendMessage(to: string, message: string) {

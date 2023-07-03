@@ -1,22 +1,43 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Projects */
+
+    /* Language and Environment */
+    "target": "esnext",                               /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    /* Modules */
+    "module": "commonjs",                             /* Specify what module code is generated. */
+    // "rootDir": "./",                               /* Specify the root folder within your source files. */
+    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+    "resolveJsonModule": true,                        /* Enable importing .json files */
+
+    /* JavaScript Support */
+    "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+
+    /* Emit */
+    "outDir": "./dist",                               /* Specify an output folder for all emitted files. */
     "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true
+    // "removeComments": true,                           /* Disable emitting comments. */
+
+    /* Interop Constraints */
+    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+    // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    // "incremental": true,
+    // "noImplicitAny": false,
+    // "strictBindCallApply": false,
+    // "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@common/util": ["socket-io/util"],
+      "@common/util/*": ["socket-io/util/*"]
+    }
   }
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socket test</title>
+    <script>
+        import socket from 'socket.io';
+        function postSendMessage() {
+            const data = {
+                to: 'message',
+                message: 'Hello Socket World!'
+            };
+            fetch('/io/send/message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => {
+                let data = res.json();
+                console.log('Response json data :: ', data);
+            })
+            .then(data => {
+                console.log('Response data :: ', data);
+            })
+            .catch(error => {
+                console.error('Error :: ', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Request</h1>
+    <button onclick="postSendMessage()">Send Message</button>
+</body>
+</html>

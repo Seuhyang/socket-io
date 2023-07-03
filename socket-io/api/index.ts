@@ -1,7 +1,7 @@
 import express from 'express';
 import http from 'http';
 import { Server as SocketIOServer, Socket } from 'socket.io';
-import { setIO } from 'socket-io/util/socket.io';
+import { setIO } from '../util/socket-io';
 
 import indexRouter from './router';
 import ioRouter from './io/router';
@@ -15,7 +15,7 @@ app.use(express.json()); // JSON 데이터 파싱을 을 위한 미들웨어
 app.use(express.urlencoded({ extended: false })); // 폼 데이터 파싱을 위한 미들웨어
 
 const server = http.createServer(app);
-
+//
 // socket.io server
 const io = new SocketIOServer(server);
 
@@ -39,7 +39,7 @@ io.on('connection', (socket: Socket) => {
 });
 
 app.use('/', indexRouter);
-app.use('/ws', ioRouter);
+app.use('/io', ioRouter);
 
 server.listen(PORT, () => {
     console.log(`server running on http://localhost:${PORT}`);
