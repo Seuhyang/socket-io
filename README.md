@@ -1,8 +1,6 @@
 # socket.io
 
-<img src="https://img.shields.io/badge/nodejs-v16.17.1-important" />
-<img src="https://img.shields.io/badge/express-v4.18.2-red" />
-<img src="https://img.shields.io/badge/socket.io-v4.7.1-blue" />
+<img src="https://img.shields.io/badge/nodejs-v16.17.1-important" /><img src="https://img.shields.io/badge/express-v4.18.2-red" /><img src="https://img.shields.io/badge/socket.io-v4.7.1-blue" />
 
 <br>
 
